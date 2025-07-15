@@ -77,7 +77,7 @@ export const companyDetails = {
 
 export const services = [
   {
-    title: "App Developmentt",
+    title: "App Development",
     link: "app-development",
     description:
       "We build custom iOS and Android apps that are smooth, scalable, and ready for real-world use. From MVPs to enterprise-grade systems, our mobile solutions are designed to perform — and keep your users coming back.",
