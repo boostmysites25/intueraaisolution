@@ -20,6 +20,7 @@ const Thankyou = lazy(() => import("./Pages/Thankyou"));
 const Portfolio = lazy(() => import("./Pages/Portfolio"));
 
 import { LoadingSpinner } from "./Components/Loader";
+import WhatsAppIcon from "./Components/WhatsApp";
 
 const AppRouter = createBrowserRouter([
   {
@@ -67,6 +68,7 @@ const AppRouter = createBrowserRouter([
           propertyId="68763c0dc944ed1910dc5e37"
           widgetId="1j06tl59r"
         />
+        <WhatsAppIcon />
         <Toaster
           position="top-bottom"
           toastOptions={{
@@ -89,6 +91,7 @@ const AppRouter = createBrowserRouter([
           propertyId="68763c0dc944ed1910dc5e37"
           widgetId="1j06tl59r"
         />
+        <WhatsAppIcon />
         <Toaster
           position="top-bottom"
           toastOptions={{
