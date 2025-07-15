@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+// import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 const AppLayout = lazy(() => import("./Layout/AppLayout"));
 const ContactUsPage = lazy(() => import("./Pages/ContactUsPage"));
@@ -64,10 +64,10 @@ const AppRouter = createBrowserRouter([
     path: "/web-development",
     element: (
       <Suspense fallback={<LoadingSpinner />}>
-        <TawkMessengerReact
+        {/* <TawkMessengerReact
           propertyId="68763c0dc944ed1910dc5e37"
           widgetId="1j06tl59r"
-        />
+        /> */}
         <WhatsAppIcon />
         <Toaster
           position="top-bottom"
@@ -87,10 +87,10 @@ const AppRouter = createBrowserRouter([
     path: "/app-development",
     element: (
       <Suspense fallback={<LoadingSpinner />}>
-        <TawkMessengerReact
+        {/* <TawkMessengerReact
           propertyId="68763c0dc944ed1910dc5e37"
           widgetId="1j06tl59r"
-        />
+        /> */}
         <WhatsAppIcon />
         <Toaster
           position="top-bottom"
