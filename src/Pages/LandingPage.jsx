@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LandingHeader from "../Components/landingpage/LandingHeader";
 import LandingFooter from "../Components/landingpage/LandingFooter";
 import HomePageBanner from "../Components/HomePageBanner";
@@ -16,6 +16,27 @@ import Portfolio from "../Components/Portfolio";
 const LandingPage = ({ page }) => {
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
+
+  // Initialize Tawk.to
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.tawk.to/68763c0dc944ed1910dc5e37/1j06tl59r";
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    
+    // Add script to head
+    document.head.appendChild(script);
+    
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const existingScript = document.querySelector(`script[src="https://embed.tawk.to/68763c0dc944ed1910dc5e37/1j06tl59r"]`);
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingHeader />

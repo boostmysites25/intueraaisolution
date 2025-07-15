@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
@@ -7,22 +7,39 @@ import WhatsAppIcon from "../Components/WhatsApp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 const AppLayout = () => {
+  // Initialize AOS
   AOS.init({
     once: true,
     duration: 1000,
     offset: -10,
   });
+
+  // Initialize Tawk.to
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.tawk.to/68763c0dc944ed1910dc5e37/1j06tl59r";
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    
+    // Add script to head
+    document.head.appendChild(script);
+    
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const existingScript = document.querySelector(`script[src="https://embed.tawk.to/68763c0dc944ed1910dc5e37/1j06tl59r"]`);
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   return (
     <div>
       <Header />
       <WhatsAppIcon />
-      {/* <TawkMessengerReact
-        propertyId="68763c0dc944ed1910dc5e37"
-        widgetId="1j06tl59r"
-      /> */}
       <ScrollToTop />
       <div className="bg-white dark:bg-darkbackground">
         <Outlet />
