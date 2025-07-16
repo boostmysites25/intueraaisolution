@@ -72,7 +72,7 @@ export const companyDetails = {
     },
   ],
   whatsapp:
-    "https://api.whatsapp.com/send/?phone=9265392817&text&type=phone_number&app_absent=0",
+    "https://api.whatsapp.com/send/?phone=9510880965&text&type=phone_number&app_absent=0",
 };
 
 export const services = [
