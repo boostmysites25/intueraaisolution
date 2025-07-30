@@ -69,7 +69,7 @@ const ContactUsPage = () => {
               <p>Phone: {companyDetails.phone}</p>
               <p>Email: {companyDetails.email}</p>
               <p>Office Address: {companyDetails.address}</p>
-              <p>Website: www.intueraaisolutions.com</p>
+              <p>Website: www.intueraaisolution.com</p>
             </div>
           </div>
 
