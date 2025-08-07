@@ -82,63 +82,73 @@ const ContactUsPage = () => {
           </h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                data-aos="fade-right"
-                {...register("fullName", { required: "Full Name is required" })}
-                type="text"
-                placeholder="Full Name"
-                className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
-              />
-              {errors.fullName && (
-                <p className="text-red-500">{errors.fullName.message}</p>
-              )}
+              <div>
+                <input
+                  data-aos="fade-right"
+                  {...register("fullName", {
+                    required: "Full Name is required",
+                  })}
+                  type="text"
+                  placeholder="Full Name"
+                  className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
+                />
+                {errors.fullName && (
+                  <p className="text-red-500">{errors.fullName.message}</p>
+                )}
+              </div>
 
-              <input
-                data-aos="fade-left"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Invalid email address",
-                  },
-                })}
-                type="email"
-                placeholder="Email"
-                className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
-              />
-              {errors.email && (
-                <p className="text-red-500">{errors.email.message}</p>
-              )}
+              <div>
+                <input
+                  data-aos="fade-left"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Invalid email address",
+                    },
+                  })}
+                  type="email"
+                  placeholder="Email"
+                  className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
+                />
+                {errors.email && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                data-aos="fade-right"
-                {...register("phoneNumber", {
-                  required: "Phone Number is required",
-                  pattern: {
-                    value: /^[0-9]{10}$/,
-                    message: "Invalid phone number",
-                  },
-                })}
-                type="text"
-                placeholder="Phone Number"
-                className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
-              />
-              {errors.phoneNumber && (
-                <p className="text-red-500">{errors.phoneNumber.message}</p>
-              )}
+              <div>
+                <input
+                  data-aos="fade-right"
+                  {...register("phoneNumber", {
+                    required: "Phone Number is required",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "Invalid phone number",
+                    },
+                  })}
+                  type="text"
+                  placeholder="Phone Number"
+                  className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
+                />
+                {errors.phoneNumber && (
+                  <p className="text-red-500">{errors.phoneNumber.message}</p>
+                )}
+              </div>
 
-              <input
-                data-aos="fade-left"
-                {...register("subject", { required: "Subject is required" })}
-                type="text"
-                placeholder="Subject"
-                className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
-              />
-              {errors.subject && (
-                <p className="text-red-500">{errors.subject.message}</p>
-              )}
+              <div>
+                <input
+                  data-aos="fade-left"
+                  {...register("subject", { required: "Subject is required" })}
+                  type="text"
+                  placeholder="Subject"
+                  className="p-3 rounded bg-[#1c2130] border border-[#2a2f42] text-white w-full"
+                />
+                {errors.subject && (
+                  <p className="text-red-500">{errors.subject.message}</p>
+                )}
+              </div>
             </div>
 
             <textarea
