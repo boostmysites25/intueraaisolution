@@ -53,8 +53,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export const companyDetails = {
   name: "IntueraAi Solution",
-  email: "mpranavprem@gmail.com",
-  // email: "intueraaisolution@gmail.com",
+  email: "intueraaisolution@gmail.com",
   phone: "+91-9510880965",
   address: "India",
   socialLinks: [
